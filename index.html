@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        Nintendo
+        <span class="header__subtitle"> Fans Web </span>
+      </h1>
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <a href="login/login.html">
+          <button class="header__cart-btn" id="login"> 登录</button>
+          <button class="header__cart-btn" id="toggle-cart-btn">
+          </a>
+ <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> 购物车</button>
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>商品</th>
+                  <th>名字</th>
+                  <th>价格</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">结算</a>
+            <a href="#" id="clear-cart" class="cart-btn">清空购物车</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__main">
+    <p class="display-title text-light">
+      这里可以找到任天堂的周边！
+    </p>
+  </div>
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+</svg></div>
+</header>
+<main class="container page-content">
+  <h2 class="page-title">商品</h2>
+  <div class="grid" id="grid">
+    <div class="card">
+      <img src="resource/skysword.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">塞尔达传说御天之剑</h4>
+        <p class="card__text">Nintendo</p>
+        <p class="card__price">$60</p>
+        <button class="card__btn add-to-cart" data-id="6">添加到购物车</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="resource/metroid.jpg" alt="">
+      <div class="card__info">
+        <h4 class="card__title">密特罗德生存恐惧</h4>
+        <p class="card__text">Nintendo</p>
+        <p class="card__price">$60</p>
+        <button class="card__btn add-to-cart" data-id="7">添加到购物车</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="resource/wario.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">瓦里奥制造</h4>
+        <p class="card__text">Nintendo</p>
+        <p class="card__price">$40</p>
+        <button class="card__btn add-to-cart" data-id="8">添加到购物车</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="resource/mhr.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">怪物猎人：崛起</h4>
+        <p class="card__text">Capcom</p>
+        <p class="card__price">$60</p>
+        <button class="card__btn add-to-cart" data-id="9">添加到购物车</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="resource/ff.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">最终幻想13重制版</h4>
+        <p class="card__text">Square Enix</p>
+        <p class="card__price">$20</p>
+        <button class="card__btn add-to-cart" data-id="10">添加到购物车</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="resource/xenoblade.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">异度之刃2</h4>
+        <p class="card__text">Monolith Soft</p>
+        <p class="card__price">$60</p>
+        <button class="card__btn add-to-cart" data-id="11">添加到购物车</button>
+      </div>
+    </div>
+<!--    &lt;!&ndash;.card&ndash;&gt;-->
+<!--    <div class="card">-->
+<!--      <img src="https://images.unsplash.com/photo-1499363153295-198bd26fb759?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e41eceff87e7589372eee34b42b83a4a" alt="" class="card__image">-->
+<!--      <div class="card__info">-->
+<!--        <h4 class="card__title">Build Layouts with CSS Grid</h4>-->
+<!--        <p class="card__text">John Doe</p>-->
+<!--        <p class="card__price">$60</p>-->
+<!--        <button class="card__btn add-to-cart" data-id="12">添加到购物车</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;.card&ndash;&gt;-->
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__links">
+    <ul class="footer__list">
+      <li class="footer__list-item"><a class="footer__link-item" href="#">关于我们</a></li>
+<!--      <li class="footer__list-item"><a class="footer__link-item" href="#">Become an instructor</a></li>-->
+<!--      <li class="footer__list-item"><a class="footer__link-item" href="#">Legal</a></li>-->
+    </ul>
+  </div>
+  <div class="credits">
+    <p class="credits__small-text">&copy;2021 NINTENDO FANS:LB/LZW/CHY </p>
+  </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
