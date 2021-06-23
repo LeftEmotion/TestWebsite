@@ -5,4 +5,5 @@
 - 跟朋友用了不到三个小时搞定，其实还挺水的
 
 ### NINTENDO RULES THE F*CKING WORLD!
+2021.06.24
 
